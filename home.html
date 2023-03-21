@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home Page</title>
+  <style> @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+  *
+  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    scroll-behavior: smooth;
+  }
+  body{
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(#2b1055,#7597de);
+  }
+  header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+  }
+  header .logo
+  {
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header ul li{
+    list-style:none;
+    margin-left: 20px;
+  }
+  header ul li a
+  {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #ffffff;
+    border-radius: 20px;
+  }
+  header ul li a:hover,
+  header ul li a.active
+  {
+    background: #ffffff;
+    color: #2b1055;
+  }
+  section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  section::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top,#1c0522,transparent);
+    z-index: 1000;
+  }
+  section img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+  }
+  section img#moon{
+    mix-blend-mode: screen;
+  }
+  section img#mountains_front{
+    z-index: 10;
+  }
+  #text{
+    position: absolute;
+    color: #ffffff;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 9;
+
+  }
+  #btn{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #ffffff;
+    color: #2b1055;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(100px);
+  }
+  .sec{
+    position: relative;
+    padding: 100px;
+    background: #1c0522;
+  }
+  .sec h2{
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+  .sec p{
+    font-size: 1.2em;
+    color: #ffffff;
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="#" class="logo">O_O</a>
+    <ul>
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Work</a></li>
+      <li><a href="#">contacts</a></li>
+    </ul>
+   </header>
+   <section>
+     <img src="C:\Users\Hites\OneDrive\Desktop\New folder\htrml\stars.png" id="stars">
+     <img src="C:\Users\Hites\OneDrive\Desktop\New folder\htrml\moon.png" id="moon">
+     <img src="C:\Users\Hites\OneDrive\Desktop\New folder\htrml\mountains_behind.png" id="mountains_behind">
+     <h2 id="text">CrazzY</h2>
+     <img src="C:\Users\Hites\OneDrive\Desktop\New folder\htrml\mountains_front.png" id="mountains_front">
+   </section>
+   <div class="sec" id="sec">
+     <h2> What is a one-time password (OTP)?</h2>
+     <p>A one-time password (OTP) is an automatically generated numeric or alphanumeric string of characters that authenticates a user for a single transaction or login session.</br>
+An OTP is more secure than a static password, especially a user-created password, which can be weak and/or reused across multiple accounts.</br>
+OTPs may replace authentication login information or may be used in addition to it to add another layer of security.</br></br>
+</p><p><b>One-time password examples</b></br></br>OTP security tokens are microprocessor-based smart cards or pocket-size key fobs that produce a numeric or alphanumeric code to authenticate access to the system or transaction. This secret code changes every 30 or 60 seconds, depending on how the token is configured.</br>Mobile device apps, such as Google Authenticator, rely on the token device and PIN to generate the one-time password for two-step verification.</br>OTP security tokens can be implemented using hardware, software or on demand. Unlike traditional passwords that remain static or expire every 30 to 60 days, the one-time password is used for one transaction or login session.</br></br></p>
+</br></br><p><b>How to get a one-time password</b></br>When an unauthenticated user attempts to access a system or perform a transaction on a device, an authentication manager on the network server generates a number or shared secret, using one-time password algorithms. The same number and algorithm are used by the security token on the smart card or device to match and validate the one-time password and user.</br>Many companies use Short Message Service (SMS) to provide a temporary passcode via text for a second authentication factor. The temporary passcode is obtained out of band through cellphone communications after the user enters his username and password on networked information systems and transaction-oriented web applications.</br>For two-factor authentication (2FA), the user enters his user ID, traditional password and temporary passcode to access the account or system.</br></br></p>
+<p><b>How a one-time password works</b></br>In OTP-based authentication methods, the user's OTP app and the authentication server rely on shared secrets.</br>
+  Values for one-time passwords are generated using the Hashed Message Authentication Code (HMAC) algorithm and a moving factor, such as time-based information (TOTP) or an event counter (HOTP)</br>
+  The OTP values have minute or second timestamps for greater security. The one-time password can be delivered to a user through several channels, including an SMS-based text message, an email or a dedicated application on the endpoint.
+</br>
+Security professionals have long been concerned that SMS message spoofing and man-in-the-middle (MITM) attacks can be used to break 2FA systems that rely on one-time passwords. However, the U.S. National Institute of Standards and Technology (NIST) announced plans to deprecate the use of SMS for 2FA and one-time passwords, as the method is vulnerable to an assortment of attacks that could compromise those passwords and codes. As a result, enterprises considering deployment of one-time passwords should explore other delivery methods besides SMS.</br></br></p>
+<p><b><u>Benefits of a one-time password</u></b></br>The one-time password avoids common pitfalls that IT administrators and security managers face with password security. They do not have to worry about composition rules, known-bad and weak passwords, sharing of credentials or reuse of the same password on multiple accounts and systems.
+
+</br>
+Another advantage of one-time passwords is that they become invalid in minutes, which prevents attackers from obtaining the secret codes and reusing them.</p>
+
+
+
+<script>
+   let stars = document.getElementById('stars');
+   let moon = document.getElementById('moon');
+   let mountains_behind = document.getElementById('mountains_behind');
+   let text = document.getElementById('text');
+   let btn = document.getElementById('btn');
+   let mountains_front = document.getElementById('mountains_front');
+   let header = document.querySelector('header');
+   window.addEventListener('scroll',function(){
+     let value = window.scrollY;
+     stars.style.left=value*0.25+'px';
+     moon.style.top=value*1.05+'px';
+     mountains_behind.style.top=value*0.5+'px';
+     mountains_front.style.top=values*0+'px';
+
+     btn.style.marginTop=value*1.5+'px';
+     header.style.top=value*0.5+'px';
+   })
+</script>
+
+</body>
+</html>
